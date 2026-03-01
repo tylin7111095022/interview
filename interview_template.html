@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>林宗佑 - 演算法工程師面試簡報</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/night.min.css"
+    />
+    <style>
+      .reveal h1,
+      .reveal h2 {
+        color: #00d4ff;
+        text-transform: none;
+      }
+      .title-center {
+        text-align: center;
+      }
+      .highlight {
+        color: #00d4ff;
+        font-weight: bold;
+      }
+      .sub-text {
+        font-size: 0.7em;
+        color: #bbb;
+      }
+      .skill-tag {
+        display: inline-block;
+        background: #333;
+        padding: 5px 15px;
+        border-radius: 5px;
+        margin: 5px;
+        font-size: 0.6em;
+        border: 1px solid #00d4ff;
+      }
+      .project-box {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        text-align: left;
+      }
+      .reveal section img {
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+      }
+      .title-row {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .title-row img {
+        border-radius: 8px;
+        width: 200px;
+        height: auto;
+      }
+      .vstack {
+        height: 100%;
+        min-height: 350px; /* 確保有足夠的最小高度展示圖片 */
+        max-height: 400px; /* 確保最高高度 */
+        background: rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(0, 212, 255, 0.4);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+      .vstack .vitem {
+        width: 100%;
+        display: flex;
+        align-items: center; /* 垂直置中 */
+        justify-content: center; /* 水平置中 */
+        flex: 1; /* 確保平分空間 */
+        padding: 5px; /* 增加一點邊距，避免貼邊 */
+        overflow: hidden; /* 防止圖片溢出容器 */
+      }
+
+      .vstack .vitem img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* 保持比例縮放，完整顯示 */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-background-gradient="linear-gradient(to bottom, #000428, #004e92)"
+        >
+          <div class="title-row">
+            <img src="assets/person.png" />
+            <h1>林宗佑 <small style="font-size: 0.5em">TSUNG-YU LIN</small></h1>
+          </div>
+          <p class="highlight">應徵職稱：演算法工程師</p>
+          <p class="sub-text">專長：深度學習、影像處理</p>
+          <hr />
+          <p style="font-size: 0.6em">0977-661-082 | asd3718295@gmail.com</p>
+        </section>
+
+        <section>
+          <h2 class="title-center">
+            背景總覽
+            <small style="font-size: 0.5em; vertical-align: middle"
+              >Background & Experience</small
+            >
+          </h2>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1.2fr;
+              gap: 30px;
+              margin-top: 20px;
+            "
+          >
+            <div
+              style="
+                font-size: 0.7em;
+                text-align: left;
+                border-right: 1px solid rgba(0, 212, 255, 0.3);
+                padding-right: 20px;
+              "
+            >
+              <h3
+                style="
+                  font-size: 1.2em;
+                  border-bottom: 2px solid #00d4ff;
+                  display: inline-block;
+                "
+              >
+                個人簡介 & 學歷
+              </h3>
+              <ul style="margin-top: 15px">
+                <li>
+                  <strong class="highlight">國立中興大學</strong
+                  ><small> (2022/8 - 2024/7)</small
+                  ><br />資料科學與資訊計算研究所 碩士
+                </li>
+                <li style="margin-top: 10px">
+                  <strong class="highlight">國立嘉義大學</strong
+                  ><br />微生物免疫與生物藥學系 學士
+                </li>
+                <hr
+                  style="
+                    border: 0;
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    margin: 20px 0;
+                  "
+                />
+                <li>具備AI模型研發、API 部署 (FastAPI) 到 網頁前端經驗。</li>
+                <li>
+                  擅長將複雜演算法轉化為專利技術，具備產線與醫療級專案實務經驗。
+                </li>
+              </ul>
+            </div>
+
+            <div style="font-size: 0.7em; text-align: left">
+              <h3
+                style="
+                  font-size: 1.2em;
+                  border-bottom: 2px solid #00d4ff;
+                  display: inline-block;
+                "
+              >
+                工作經歷
+              </h3>
+
+              <div style="margin-top: 15px">
+                <p style="margin-bottom: 5px">
+                  <strong class="highlight">鴻海精密工業 | 研發工程師</strong>
+                  <small>(2024/8 - 至今)</small>
+                </p>
+                <ul style="font-size: 0.9em">
+                  <li>主導 AI 演算法開發、管理3人團隊。</li>
+                  <li>負責專利佈局與核心技術開發，強化產品競爭力。</li>
+                </ul>
+              </div>
+
+              <div style="margin-top: 25px">
+                <p style="margin-bottom: 5px">
+                  <strong class="highlight">鴻海精密工業 | AI建模實習生</strong>
+                  <small>(2023/7 - 2024/5)</small>
+                </p>
+                <ul style="font-size: 0.9em">
+                  <li>
+                    優化<strong class="highlight"
+                      >領域適應 (Domain Adaptation)</strong
+                    >
+                    演算法架構。
+                  </li>
+                  <li>應用於醫療影像分割任務，提高跨院驗證AI準確度)。</li>
+                </ul>
+              </div>
+
+              <div
+                style="
+                  margin-top: 20px;
+                  padding: 10px;
+                  background: rgba(255, 255, 255, 0.05);
+                  border-radius: 5px;
+                  font-style: italic;
+                  font-size: 0.8em;
+                  color: #aaa;
+                  text-align: center;
+                "
+              >
+                " 結合學術深度與產業實戰，致力於開發具落地價值的 AI 解決方案 "
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>基於領域適應的染色體分割系統</h2>
+          <div style="display: flex; gap: 20px">
+            <div style="flex: 1; font-size: 0.7em">
+              <p>
+                <strong>目標：</strong>解決醫療影像來源多樣(跨院)導致的 Domain
+                Gap 問題。
+              </p>
+              <ul>
+                <li><strong>核心技術：</strong>知識蒸餾、風格校正、U-Net。</li>
+                <li>
+                  <strong>創新點：</strong
+                  >透過風格校正模組使模型具備跨領域適應性，提升分割精度。
+                </li>
+              </ul>
+            </div>
+            <div style="flex: 1.2">
+              <div class="vstack">
+                <div class="vitem">
+                  <img
+                    src="assets/chromosome_dataProcess.png"
+                    alt="資料處理架構圖"
+                  />
+                </div>
+                <div class="vitem">
+                  <img src="assets/chromosome.png" alt="領域適應架構圖" />
+                </div>
+              </div>
+              <p class="sub-text" style="text-align: center">
+                模型架構：風格校正與 U-Net 結合
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>冠狀動脈 3D 重建與定量分析</h2>
+          <div style="display: flex; gap: 20px">
+            <div style="flex: 1; font-size: 0.7em">
+              <p>
+                <strong>技術應用：</strong>CMPR (曲面重組)、MIP (最大密度投影)。
+              </p>
+              <ul>
+                <li>
+                  <strong>核心成果：</strong
+                  >開發血管中心線提取與狹窄定量演算法。
+                </li>
+                <li>
+                  <strong>專利貢獻：</strong>申請 3
+                  項核心專利（血管結構分組、多軸直徑整合）。
+                </li>
+              </ul>
+            </div>
+            <div style="flex: 1.2">
+              <div class="vstack">
+                <div class="vitem">
+                  <img src="assets/coro.png" alt="3D 血管重建圖" />
+                </div>
+              </div>
+              <p class="sub-text" style="text-align: center">
+                血管造影與 3D 結構重建結果
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>乳房造影病灶偵測</h2>
+          <div style="display: flex; gap: 20px">
+            <div style="flex: 1; font-size: 0.7em">
+              <p><strong>技術應用：</strong>Mask R-CNN, 影像特徵提取。</p>
+              <ul>
+                <li>
+                  <strong>應用場景：</strong>自動標註鈣化區域與混合性病灶。
+                </li>
+                <li>
+                  <strong>貢獻：</strong
+                  >提升臨床診斷效率，協助醫師快速定位病灶及量化病灶數據。
+                </li>
+              </ul>
+            </div>
+            <div style="flex: 1.2">
+              <div class="vstack">
+                <img
+                  src="assets/breastCancerDetect.png"
+                  alt="Mask R-CNN 偵測圖"
+                />
+              </div>
+              <p class="sub-text" style="text-align: center">病灶偵測</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>領域知識問答系統 (Web Scraping + RAG)</h2>
+          <div style="display: flex; gap: 20px">
+            <div style="flex: 1; font-size: 0.7em">
+              <p>
+                <strong>目標：</strong>建立特定領域的專業問答助理，透過RAG
+                提高回答可信度。
+              </p>
+              <ul>
+                <li><strong>核心技術：</strong> 網頁爬蟲、LLM、RAG。</li>
+                <li>
+                  <strong>實作流程：</strong>
+                  <ol style="margin-top: 5px; padding-left: 20px">
+                    <li>爬蟲獲取最新文章及資料。</li>
+                    <li>資料清洗、文章切分後將其換為向量並存入資料庫。</li>
+                    <li>
+                      結合使用者提問進行語意檢索，並交由 LLM
+                      生成精準且具資料佐證的回答。
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+
+            <div style="flex: 1.2">
+              <div class="vstack" style="height: 350px">
+                <div class="vitem">
+                  <img
+                    src="assets/rag_pipeline.png"
+                    alt="RAG 架構與爬蟲流程圖"
+                    style="border-radius: 5px"
+                  />
+                </div>
+              </div>
+              <p class="sub-text" style="text-align: center; margin-top: 10px">
+                資料流：網頁爬取 ➔ 向量檢索 ➔ LLM 精準生成
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>專業技術 & 專利貢獻</h2>
+          <div style="text-align: center">
+            <div class="skill-tag">Python (Core)</div>
+            <div class="skill-tag">PyTorch</div>
+            <div class="skill-tag">FastAPI</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">JavaScript / Node.js(express)</div>
+          </div>
+          <div class="project-box" style="font-size: 0.7em">
+            <p class="highlight">專利貢獻 (血管影像技術)：</p>
+            <ul>
+              <li>曲面多平面重組之血管結構自動分組方法。</li>
+              <li>基於 CMPR 之多軸直徑整合與狹窄定量方法。</li>
+              <li>血管造影關鍵點自動偵測方法。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>競賽與願景</h2>
+          <div style="display: flex; gap: 20px">
+            <div class="project-box" style="flex: 1; font-size: 0.7em">
+              <h4 class="highlight">競賽榮譽</h4>
+              <ul>
+                <li>中興大學 車牌位置標註競賽 <b>第三名</b></li>
+                <li>2023 海洋廢棄物影像識別挑戰賽 <b>入圍</b></li>
+              </ul>
+            </div>
+            <div class="project-box" style="flex: 1; font-size: 0.7em">
+              <h4 class="highlight">為什麼選擇我？</h4>
+              <ul>
+                <li>在鴻海擁有 2-3 年研發實戰經驗</li>
+                <li>具備管理小型團隊與專案規劃能力</li>
+                <li>具備從模型研發到API部署與前端介面Demo能力。</li>
+                <li>申請專利證明具備演算法創新與優化實力。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section data-background-color="#004e92">
+          <h1>感謝聆聽</h1>
+          <p>期待能與您分享更多技術細節</p>
+          <div style="margin-top: 50px">
+            <p class="highlight">Q & A</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        slideNumber: "c/t",
+        transition: "convex",
+        mouseWheel: true,
+      });
+    </script>
+  </body>
+</html>
