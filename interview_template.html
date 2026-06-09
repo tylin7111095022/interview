@@ -241,95 +241,115 @@
 
         <section>
           <h2>基於領域適應的染色體分割系統</h2>
-          <div style="display: flex; gap: 20px">
-            <div class="project-text" style="flex: 1; font-size: 0.7em">
-              <p>
-                <strong>目標：</strong>解決醫療影像來源多樣（跨院）導致的 Domain Gap 問題。
+          <div style="display: flex; gap: 20px; align-items: stretch">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+              <p style="font-size: 0.65em; margin-bottom: 2px">
+                <strong>技術應用：</strong>Cycle-GAN + U-Net + 師生模型 (Teacher-Student) + AdaIN
               </p>
-              <ul>
-                <li><strong>核心技術：</strong>知識蒸餾、風格校正、U-Net。</li>
-                <li>
-                  <strong>創新點：</strong>透過風格校正模組使模型具備跨領域適應性，提升分割精度。
-                </li>
-              </ul>
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">Cycle-GAN 風格轉換</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">消弭榮總與長庚影像間的外觀差異，假圖分類器驗證準確率達 96.6%。</p>
+                </div>
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">師生模型 + 熵權重</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">以熵圖調整偽標籤可信度，無需目標域標籤也可優化分割效能。</p>
+                </div>
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">AdaIN 特徵統計量校正</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">對齊各層編碼器特徵的均值與標準差，將源域分佈對齊至目標域。</p>
+                </div>
+              </div>
+              <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
+                <strong style="color: #4dff91">技術成果</strong>
+                <span style="color: #ddd">　三種策略均超越 baseline，最佳組合達 MIoU <strong style="color: #fff">93.22%</strong>、Dice <strong style="color: #fff">93.16%</strong>。推論僅需 <strong style="color: #fff">24 秒</strong>，較人工標註 2小時效率提升逾 <strong style="color: #fff">300×</strong>。</span>
+              </div>
             </div>
-            <div style="flex: 1.2">
-              <div class="vstack">
+            <div style="flex: 1.2; display: flex; flex-direction: column">
+              <div class="vstack" style="min-height: 0; flex: 1">
                 <div class="vitem">
-                  <img
-                    src="assets/chromosome_dataProcess.png"
-                    alt="資料處理架構圖"
-                  />
+                  <img src="assets/chromosome_dataProcess.png" alt="資料處理架構圖" />
                 </div>
                 <div class="vitem">
                   <img src="assets/chromosome.png" alt="領域適應架構圖" />
                 </div>
               </div>
-              <p class="sub-text" style="text-align: center">
-                模型架構：風格校正與 U-Net 結合
-              </p>
+              <p class="sub-text" style="text-align: center">風格轉換流程與領域適應架構</p>
             </div>
           </div>
         </section>
 
         <section>
           <h2>冠狀動脈 3D 重建與定量分析</h2>
-          <div style="display: flex; gap: 20px">
-            <div class="project-text" style="flex: 1; font-size: 0.7em">
-              <p>
-                <strong>技術應用：</strong>CMPR（曲面重組）、MIP（最大密度投影）。
+          <div style="display: flex; gap: 20px; align-items: stretch">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+              <p style="font-size: 0.65em; margin-bottom: 2px">
+                <strong>技術應用：</strong>nn-UNet + 圖論演算法 + CPR 重組、自適應管徑量化、自監督關鍵點偵測
               </p>
-              <ul>
-                <li>
-                  <strong>核心成果：</strong>開發血管中心線提取與狹窄定量演算法。
-                </li>
-                <li>
-                  <strong>專利貢獻：</strong>申請 3 項核心專利（血管結構分組、多軸直徑整合）。
-                </li>
-              </ul>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">血管分組與 CPR</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">首創圖論連通性分析，自動分組血管片段並驅動 CPR 拉直重組，大幅減少人工介入。</p>
+                </div>
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">自適應管徑量化</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">研發零人工標註的自適應邊緣偵測演算法，180° 多軸截面精準還原管徑，輔助狹窄定位。</p>
+                </div>
+              </div>
+              <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
+                <strong style="color: #4dff91">技術成果</strong>
+                <span style="color: #ddd">　主導完整冠心病 CADe 流程（CT 分割 → 血管追蹤 → 狹窄定量），共申請 <strong style="color: #fff">2 項</strong>核心專利，實現零人工標註的自動化診斷流程。</span>
+              </div>
             </div>
-            <div style="flex: 1.2">
-              <div class="vstack">
+            <div style="flex: 1.2; display: flex; flex-direction: column">
+              <div class="vstack" style="min-height: 0; flex: 1">
                 <div class="vitem">
                   <img src="assets/coro.png" alt="3D 血管重建圖" />
                 </div>
               </div>
-              <p class="sub-text" style="text-align: center">
-                血管造影與 3D 結構重建結果
-              </p>
+              <p class="sub-text" style="text-align: center">血管造影與 3D 結構重建結果</p>
             </div>
           </div>
         </section>
 
         <section>
           <h2>乳房造影病灶偵測</h2>
-          <div style="display: flex; gap: 20px">
-            <div class="project-text" style="flex: 1; font-size: 0.7em">
-              <p><strong>技術應用：</strong>Faster R-CNN、constrative learning</p>
-              <ul>
-                <li>
-                  <strong>應用場景：</strong>自動定位乳房病灶區域(鈣化)，並對ROI進行良惡性評級。
-                </li>
-                <li>
-                  <strong>貢獻：</strong>提升臨床診斷效率，協助醫師快速定位病灶及量化病灶數據。
-                </li>
-              </ul>
-            </div>
-            <div style="flex: 1.2">
-              <div class="vstack">
-                <div class="vitem">
-                  <img
-                    src="assets/breastCancerDetect.png"
-                    alt="Mask R-CNN 偵測圖"
-                  />
+          <div style="display: flex; gap: 20px; align-items: stretch">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+              <p style="font-size: 0.65em; margin-bottom: 2px">
+                <strong>技術應用：</strong>ViT (DINOv3) + Faster R-CNN
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">前處理創新</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">前處理（Min-Max / Gamma / CLAHE）強化病灶特徵。</p>
+                </div>
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">特徵金字塔</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">凍結 ViT 攔截淺、中、深層特徵，建構多尺度感知。</p>
+                </div>
+                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                  <strong style="color: #7fe8ff">推論策略</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">非對稱閾值（Calc / Mass），兼顧靈敏度與特異度。</p>
                 </div>
               </div>
-              <p class="sub-text" style="text-align: center">病灶偵測</p>
+              <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
+                <strong style="color: #4dff91">技術成果</strong>
+                <span style="color: #ddd">　自動定位微鈣化與腫塊。單次閱片平均節省 <strong style="color: #fff">5–10 秒</strong>搜索時間，預期可降低醫師近 <strong style="color: #fff">40%</strong> 篩檢工作量。</span>
+              </div>
+            </div>
+            <div style="flex: 1.2; display: flex; flex-direction: column">
+              <div class="vstack" style="min-height: 0; flex: 1">
+                <div class="vitem">
+                  <img src="assets/breastCancerDetect.png" alt="CADe 偵測結果圖" />
+                </div>
+              </div>
+              <p class="sub-text" style="text-align: center">病灶偵測結果</p>
             </div>
           </div>
         </section>
 
-        <section>
+        <!-- <section>
           <h2>領域知識問答系統 (Web Scraping + RAG)</h2>
           <div style="display: flex; gap: 20px">
             <div class="project-text" style="flex: 1; font-size: 0.7em">
@@ -366,7 +386,7 @@
               </p>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <section>
           <h2>專業技術 & 專利貢獻</h2>
@@ -407,6 +427,7 @@
                 <li>曲面多平面重組之血管結構自動分組方法。</li>
                 <li>基於 CMPR 之多軸直徑整合與狹窄定量方法。</li>
                 <li>血管造影關鍵點自動偵測方法。</li>
+                <li>基於 Vision Transformer 之乳房病灶偵測系統。</li>
               </ul>
             </div>
 
@@ -429,23 +450,28 @@
 
         <section>
           <h2>競賽與願景</h2>
-          <div style="display: flex; gap: 20px">
-            <div class="project-box" style="flex: 1; font-size: 0.7em">
-              <h4 class="highlight">榮譽</h4>
-              <ul>
-                <li>中興大學 車牌位置標註競賽 <b>第三名</b></li>
-                <li>2023 海洋廢棄物影像識別挑戰賽 <b>入圍</b></li>
-                <li>胸腔表面點雲生成方法 <b>專利證書</b></li>
-              </ul>
+          <div style="display: flex; gap: 20px; align-items: stretch">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 12px">
+              <div class="project-box" style="flex: 1; font-size: 0.7em">
+                <h4 class="highlight">榮譽</h4>
+                <ul>
+                  <li>中興大學 車牌位置標註競賽 <b>第三名</b></li>
+                  <li>2023 海洋廢棄物影像識別挑戰賽 <b>入圍</b></li>
+                  <li>胸腔表面點雲生成方法 <b>專利證書</b></li>
+                </ul>
+              </div>
+              <div class="project-box" style="flex: 1; font-size: 0.7em">
+                <h4 class="highlight">為什麼選擇我？</h4>
+                <ul>
+                  <li>在鴻海擁有 2-3 年研發實戰經驗</li>
+                  <li>具備管理小型團隊與專案規劃能力</li>
+                  <li>具備從模型研發到API部署與前端介面Demo能力。</li>
+                  <li>申請專利證明具備演算法創新與優化實力。</li>
+                </ul>
+              </div>
             </div>
-            <div class="project-box" style="flex: 1; font-size: 0.7em">
-              <h4 class="highlight">為什麼選擇我？</h4>
-              <ul>
-                <li>在鴻海擁有 2-3 年研發實戰經驗</li>
-                <li>具備管理小型團隊與專案規劃能力</li>
-                <li>具備從模型研發到API部署與前端介面Demo能力。</li>
-                <li>申請專利證明具備演算法創新與優化實力。</li>
-              </ul>
+            <div style="flex: 1.4; display: flex; align-items: center; justify-content: center">
+              <img src="assets/競賽獎狀.png" alt="競賽獎狀" style="max-width: 100%; max-height: 480px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 16px rgba(0,0,0,0.5)" />
             </div>
           </div>
         </section>
@@ -465,6 +491,8 @@
       Reveal.initialize({
         hash: true,
         slideNumber: "c/t",
+        width: 1200,
+        height: 700,
         transition: "convex",
         mouseWheel: true,
       });
