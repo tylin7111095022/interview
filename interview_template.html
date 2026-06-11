@@ -265,8 +265,8 @@
                 <span style="color: #ddd">　三種策略均超越 baseline，最佳組合達 MIoU <strong style="color: #fff">93.22%</strong>、Dice <strong style="color: #fff">93.16%</strong>。推論僅需 <strong style="color: #fff">24 秒</strong>，較人工標註 2小時效率提升逾 <strong style="color: #fff">300×</strong>。</span>
               </div>
             </div>
-            <div style="flex: 1.2; display: flex; flex-direction: column">
-              <div class="vstack" style="min-height: 0; flex: 1">
+            <div style="flex: 1.2; display: flex; flex-direction: column; align-self: stretch">
+              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
                 <div class="vitem">
                   <img src="assets/chromosome_dataProcess.png" alt="資料處理架構圖" />
                 </div>
@@ -284,25 +284,25 @@
           <div style="display: flex; gap: 20px; align-items: stretch">
             <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
               <p style="font-size: 0.65em; margin-bottom: 2px">
-                <strong>技術應用：</strong>nn-UNet + 圖論演算法 + CPR 重組、自適應管徑量化、自監督關鍵點偵測
+                <strong>技術應用：</strong>nn-UNet 、CPR 重組、血管管徑量化
               </p>
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
                 <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
                   <strong style="color: #7fe8ff">血管分組與 CPR</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">首創圖論連通性分析，自動分組血管片段並驅動 CPR 拉直重組，大幅減少人工介入。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">血管節點建立Graph後自動分組血管，透過CPR 將血管拉直重組，輔助醫師診斷。</p>
                 </div>
                 <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
                   <strong style="color: #7fe8ff">自適應管徑量化</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">研發零人工標註的自適應邊緣偵測演算法，180° 多軸截面精準還原管徑，輔助狹窄定位。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">CPR 結合 邊緣偵測演算法，精準還原血管管徑，輔助狹窄定位。</p>
                 </div>
               </div>
               <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
                 <strong style="color: #4dff91">技術成果</strong>
-                <span style="color: #ddd">　主導完整冠心病 CADe 流程（CT 分割 → 血管追蹤 → 狹窄定量），共申請 <strong style="color: #fff">2 項</strong>核心專利，實現零人工標註的自動化診斷流程。</span>
+                <span style="color: #ddd">　完整冠心病診斷流程（血管分割 → 血管分組 → 狹窄定量），共申請 <strong style="color: #fff">2 項</strong>核心專利，實現零人工標註的自動化診斷流程。</span>
               </div>
             </div>
-            <div style="flex: 1.2; display: flex; flex-direction: column">
-              <div class="vstack" style="min-height: 0; flex: 1">
+            <div style="flex: 1.2; display: flex; flex-direction: column; align-self: stretch">
+              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
                 <div class="vitem">
                   <img src="assets/coro.png" alt="3D 血管重建圖" />
                 </div>
@@ -321,16 +321,16 @@
               </p>
               <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
                 <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
-                  <strong style="color: #7fe8ff">前處理創新</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">前處理（Min-Max / Gamma / CLAHE）強化病灶特徵。</p>
+                  <strong style="color: #7fe8ff">前處理強化病灶</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">Gamma 校正 及 CLAHE 凸顯鈣化亮點。</p>
                 </div>
                 <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
-                  <strong style="color: #7fe8ff">特徵金字塔</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">凍結 ViT 攔截淺、中、深層特徵，建構多尺度感知。</p>
+                  <strong style="color: #7fe8ff">解決 ViT 無多解析度的問題</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">ViT + DeConv 建構多尺度感知。</p>
                 </div>
                 <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
                   <strong style="color: #7fe8ff">推論策略</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">非對稱閾值（Calc / Mass），兼顧靈敏度與特異度。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">不同難度病灶設定不同閾值，兼顧靈敏度與特異度。</p>
                 </div>
               </div>
               <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
@@ -338,8 +338,8 @@
                 <span style="color: #ddd">　自動定位微鈣化與腫塊。單次閱片平均節省 <strong style="color: #fff">5–10 秒</strong>搜索時間，預期可降低醫師近 <strong style="color: #fff">40%</strong> 篩檢工作量。</span>
               </div>
             </div>
-            <div style="flex: 1.2; display: flex; flex-direction: column">
-              <div class="vstack" style="min-height: 0; flex: 1">
+            <div style="flex: 1.2; display: flex; flex-direction: column; align-self: stretch">
+              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
                 <div class="vitem">
                   <img src="assets/breastCancerDetect.png" alt="CADe 偵測結果圖" />
                 </div>
@@ -461,17 +461,20 @@
                 </ul>
               </div>
               <div class="project-box" style="flex: 1; font-size: 0.7em">
-                <h4 class="highlight">為什麼選擇我？</h4>
+                <h4 class="highlight">個人優勢</h4>
                 <ul>
-                  <li>在鴻海擁有 2-3 年研發實戰經驗</li>
-                  <li>具備管理小型團隊與專案規劃能力</li>
-                  <li>具備從模型研發到API部署與前端介面Demo能力。</li>
-                  <li>申請專利證明具備演算法創新與優化實力。</li>
+                  <li>管理小型團隊與專案規劃經驗</li>
+                  <li>演算法創新與優化實力</li>
+                  <li>具有豐富影像處理經驗</li>
                 </ul>
               </div>
             </div>
-            <div style="flex: 1.4; display: flex; align-items: center; justify-content: center">
-              <img src="assets/競賽獎狀.png" alt="競賽獎狀" style="max-width: 100%; max-height: 480px; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 16px rgba(0,0,0,0.5)" />
+            <div style="flex: 1.4; display: flex; flex-direction: column; align-self: stretch">
+              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
+                <div class="vitem">
+                  <img src="assets/競賽獎狀.png" alt="競賽獎狀" style="border-radius: 6px; box-shadow: 0 2px 16px rgba(0,0,0,0.5)" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
