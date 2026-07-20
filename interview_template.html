@@ -86,7 +86,8 @@
         overflow: hidden; /* 防止圖片溢出容器 */
       }
 
-      .vstack .vitem img {
+      .vstack .vitem img,
+      .vstack .vitem video {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
@@ -120,8 +121,10 @@
             <img src="assets/person.png" />
             <h1>林宗佑 <small style="font-size: 0.5em">TSUNG-YU LIN</small></h1>
           </div>
-          <p class="highlight">應徵職稱：自動化設備機器視覺工程師</p>
-          <p class="sub-text">專長：深度學習、影像處理</p>
+          <p class="highlight">應徵職稱：AI工程師</p>
+          <p class="sub-text">
+            專長：深度學習、影像處理、Web平台開發（前後端）
+          </p>
           <hr />
           <p style="font-size: 0.6em">0977-661-082 | asd3718295@gmail.com</p>
         </section>
@@ -233,7 +236,7 @@
                   text-align: center;
                 "
               >
-                " 結合學術深度與產業實戰，致力於開發具落地價值的 AI 解決方案 "
+                " 結合學術深度與產業實戰，開發具落地價值的 AI 解決方案 "
               </div>
             </div>
           </div>
@@ -242,39 +245,95 @@
         <section>
           <h2>基於領域適應的染色體分割系統</h2>
           <div style="display: flex; gap: 20px; align-items: stretch">
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+            <div
+              style="flex: 1; display: flex; flex-direction: column; gap: 8px"
+            >
               <p style="font-size: 0.65em; margin-bottom: 2px">
-                <strong>技術應用：</strong>Cycle-GAN + U-Net + 師生模型 (Teacher-Student) + AdaIN
+                <strong>技術應用：</strong>Cycle-GAN + U-Net + 師生模型
+                (Teacher-Student) + AdaIN
               </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap: 8px;
+                "
+              >
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">Cycle-GAN 風格轉換</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">消弭榮總與長庚影像間的外觀差異，假圖分類器驗證準確率達 96.6%。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    消弭榮總與長庚影像間的外觀差異，假圖分類器驗證準確率達
+                    96.6%。
+                  </p>
                 </div>
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">師生模型 + 熵權重</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">以熵圖調整偽標籤可信度，無需目標域標籤也可優化分割效能。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    以熵圖調整偽標籤可信度，無需目標域標籤也可優化分割效能。
+                  </p>
                 </div>
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">AdaIN 特徵統計量校正</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">對齊各層編碼器特徵的均值與標準差，將源域分佈對齊至目標域。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    對齊各層編碼器特徵的均值與標準差，將源域分佈對齊至目標域。
+                  </p>
                 </div>
               </div>
-              <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
+              <div
+                style="
+                  background: rgba(77, 255, 145, 0.08);
+                  border: 1px solid rgba(77, 255, 145, 0.4);
+                  border-radius: 8px;
+                  padding: 10px 14px;
+                  font-size: 0.6em;
+                  line-height: 1.6;
+                "
+              >
                 <strong style="color: #4dff91">技術成果</strong>
-                <span style="color: #ddd">　三種策略均超越 baseline，最佳組合達 MIoU <strong style="color: #fff">93.22%</strong>、Dice <strong style="color: #fff">93.16%</strong>。推論僅需 <strong style="color: #fff">24 秒</strong>，較人工標註 2小時效率提升逾 <strong style="color: #fff">300×</strong>。</span>
+                <span style="color: #ddd"
+                  >　三種策略均超越 baseline，最佳組合達 MIoU
+                  <strong style="color: #fff">93.22%</strong>、Dice
+                  <strong style="color: #fff">93.16%</strong>。推論僅需
+                  <strong style="color: #fff">24 秒</strong>，較人工標註
+                  2小時效率提升逾
+                  <strong style="color: #fff">300×</strong>。</span
+                >
               </div>
             </div>
-            <div style="flex: 1.2; display: flex; flex-direction: column; align-self: stretch">
-              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
+            <div
+              style="
+                flex: 1.2;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+              "
+            >
+              <div
+                class="vstack"
+                style="min-height: 0; flex: 1; max-height: none"
+              >
                 <div class="vitem">
-                  <img src="assets/chromosome_dataProcess.png" alt="資料處理架構圖" />
+                  <img
+                    src="assets/chromosome_dataProcess.png"
+                    alt="資料處理架構圖"
+                  />
                 </div>
                 <div class="vitem">
                   <img src="assets/chromosome.png" alt="領域適應架構圖" />
                 </div>
               </div>
-              <p class="sub-text" style="text-align: center">風格轉換流程與領域適應架構</p>
+              <p class="sub-text" style="text-align: center">
+                風格轉換流程與領域適應架構
+              </p>
             </div>
           </div>
         </section>
@@ -282,32 +341,73 @@
         <section>
           <h2>冠狀動脈 3D 重建與定量分析</h2>
           <div style="display: flex; gap: 20px; align-items: stretch">
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+            <div
+              style="flex: 1; display: flex; flex-direction: column; gap: 8px"
+            >
               <p style="font-size: 0.65em; margin-bottom: 2px">
                 <strong>技術應用：</strong>nn-UNet 、CPR 重組、血管管徑量化
               </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px"
+              >
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">血管分組與 CPR</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">血管節點建立Graph後自動分組血管，透過CPR 將血管拉直重組，輔助醫師診斷。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    血管節點建立Graph後自動分組血管，透過CPR
+                    將血管拉直重組，輔助醫師診斷。
+                  </p>
                 </div>
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">自適應管徑量化</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">CPR 結合 邊緣偵測演算法，精準還原血管管徑，輔助狹窄定位。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    CPR 結合 邊緣偵測演算法，精準還原血管管徑，輔助狹窄定位。
+                  </p>
                 </div>
               </div>
-              <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
+              <div
+                style="
+                  background: rgba(77, 255, 145, 0.08);
+                  border: 1px solid rgba(77, 255, 145, 0.4);
+                  border-radius: 8px;
+                  padding: 10px 14px;
+                  font-size: 0.6em;
+                  line-height: 1.6;
+                "
+              >
                 <strong style="color: #4dff91">技術成果</strong>
-                <span style="color: #ddd">　完整冠心病診斷流程（血管分割 → 血管分組 → 狹窄定量），共申請 <strong style="color: #fff">2 項</strong>核心專利，實現零人工標註的自動化診斷流程。</span>
+                <span style="color: #ddd"
+                  >　完整冠心病診斷流程（血管分割 → 血管分組 →
+                  狹窄定量），共申請
+                  <strong style="color: #fff">2 項</strong
+                  >核心專利，實現零人工標註的自動化診斷流程。</span
+                >
               </div>
             </div>
-            <div style="flex: 1.2; display: flex; flex-direction: column; align-self: stretch">
-              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
+            <div
+              style="
+                flex: 1.2;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+              "
+            >
+              <div
+                class="vstack"
+                style="min-height: 0; flex: 1; max-height: none"
+              >
                 <div class="vitem">
                   <img src="assets/coro.png" alt="3D 血管重建圖" />
                 </div>
               </div>
-              <p class="sub-text" style="text-align: center">血管造影與 3D 結構重建結果</p>
+              <p class="sub-text" style="text-align: center">
+                血管造影與 3D 結構重建結果
+              </p>
             </div>
           </div>
         </section>
@@ -315,36 +415,175 @@
         <section>
           <h2>乳房造影病灶偵測</h2>
           <div style="display: flex; gap: 20px; align-items: stretch">
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 8px">
+            <div
+              style="flex: 1; display: flex; flex-direction: column; gap: 8px"
+            >
               <p style="font-size: 0.65em; margin-bottom: 2px">
                 <strong>技術應用：</strong>ViT (DINOv3) + Faster R-CNN
               </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap: 8px;
+                "
+              >
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">前處理強化病灶</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">Gamma 校正 及 CLAHE 凸顯鈣化亮點。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    Gamma 校正 及 CLAHE 凸顯鈣化亮點。
+                  </p>
                 </div>
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
-                  <strong style="color: #7fe8ff">解決 ViT 無多解析度的問題</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">ViT + DeConv 建構多尺度感知。</p>
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
+                  <strong style="color: #7fe8ff"
+                    >解決 ViT 無多解析度的問題</strong
+                  >
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    ViT + DeConv 建構多尺度感知。
+                  </p>
                 </div>
-                <div class="project-box" style="font-size: 0.58em; padding: 10px 12px">
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
                   <strong style="color: #7fe8ff">推論策略</strong>
-                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">不同難度病灶設定不同閾值，兼顧靈敏度與特異度。</p>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    不同難度病灶設定不同閾值，兼顧靈敏度與特異度。
+                  </p>
                 </div>
               </div>
-              <div style="background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.4); border-radius: 8px; padding: 10px 14px; font-size: 0.6em; line-height: 1.6">
+              <div
+                style="
+                  background: rgba(77, 255, 145, 0.08);
+                  border: 1px solid rgba(77, 255, 145, 0.4);
+                  border-radius: 8px;
+                  padding: 10px 14px;
+                  font-size: 0.6em;
+                  line-height: 1.6;
+                "
+              >
                 <strong style="color: #4dff91">技術成果</strong>
-                <span style="color: #ddd">　自動定位微鈣化與腫塊。單次閱片平均節省 <strong style="color: #fff">5–10 秒</strong>搜索時間，預期可降低醫師近 <strong style="color: #fff">40%</strong> 篩檢工作量。</span>
+                <span style="color: #ddd"
+                  >　自動定位微鈣化與腫塊。單次閱片平均節省
+                  <strong style="color: #fff">5–10 秒</strong
+                  >搜索時間，預期可降低醫師近
+                  <strong style="color: #fff">40%</strong> 篩檢工作量。</span
+                >
               </div>
             </div>
-            <div style="flex: 1.2; display: flex; flex-direction: column; align-self: stretch">
-              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
+            <div
+              style="
+                flex: 1.2;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+              "
+            >
+              <div
+                class="vstack"
+                style="min-height: 0; flex: 1; max-height: none"
+              >
                 <div class="vitem">
-                  <img src="assets/breastCancerDetect.png" alt="CADe 偵測結果圖" />
+                  <img
+                    src="assets/breastCancerDetect.png"
+                    alt="CADe 偵測結果圖"
+                  />
                 </div>
               </div>
               <p class="sub-text" style="text-align: center">病灶偵測結果</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>乳攝標註平台 (React SPA)</h2>
+          <div style="display: flex; gap: 20px; align-items: stretch">
+            <div
+              style="flex: 1; display: flex; flex-direction: column; gap: 8px"
+            >
+              <p style="font-size: 0.65em; margin-bottom: 2px">
+                <strong>技術應用：</strong>React、Vite、Cornerstone.js
+              </p>
+              <p
+                style="
+                  font-size: 0.6em;
+                  color: #ccc;
+                  line-height: 1.6;
+                  margin-bottom: 2px;
+                "
+              >
+                為放射科醫師打造的網頁端DICOM標註工具，串接AI
+                推論服務，實現預標註到人工審閱的完整閉環。
+              </p>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap: 8px;
+                "
+              >
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
+                  <strong style="color: #7fe8ff">醫學影像渲染架構</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    Cornerstone.js 解析高解析度 DICOM，四視窗 (CC/MLO)
+                    同步佈局與自訂縮放錨點。
+                  </p>
+                </div>
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
+                  <strong style="color: #7fe8ff">AI 推論整合</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    串接病灶偵測與惡性分數模型，視窗顯示最高惡性風險分數，輔助
+                    BI-RADS 3–5 判讀。
+                  </p>
+                </div>
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
+                  <strong style="color: #7fe8ff">人機協作標註</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    AI 標註框可拖曳/縮放/刪除，自訂右鍵選單與浮動面板支援多種
+                    ROI 與 BI-RADS 評分。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                flex: 1.2;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+              "
+            >
+              <div
+                class="vstack"
+                style="min-height: 0; flex: 1; max-height: none"
+              >
+                <div class="vitem">
+                  <video
+                    src="assets/mammo%20detection%20and%20evaluation%20malignant%20score.mp4"
+                    controls
+                    muted
+                    playsinline
+                  ></video>
+                </div>
+              </div>
+              <p class="sub-text" style="text-align: center">
+                DICOM 標註平台操作展示
+              </p>
             </div>
           </div>
         </section>
@@ -408,10 +647,14 @@
 
           <!-- 三欄橫排 -->
           <div style="display: flex; gap: 15px; align-items: stretch">
-
             <!-- 已核准 -->
-            <div class="project-box" style="flex: 1; font-size: 0.65em; border-left: 3px solid #4dff91">
-              <p style="color: #4dff91; font-weight: bold; margin-bottom: 8px">已核准</p>
+            <div
+              class="project-box"
+              style="flex: 1; font-size: 0.65em; border-left: 3px solid #4dff91"
+            >
+              <p style="color: #4dff91; font-weight: bold; margin-bottom: 8px">
+                已核准
+              </p>
               <ul style="margin: 0; line-height: 1.9">
                 <li>
                   <strong style="color: #7fe8ff">I920931</strong>
@@ -421,8 +664,17 @@
             </div>
 
             <!-- 申請中 -->
-            <div class="project-box" style="flex: 1.3; font-size: 0.65em; border-left: 3px solid #ffcc44">
-              <p style="color: #ffcc44; font-weight: bold; margin-bottom: 8px">申請中</p>
+            <div
+              class="project-box"
+              style="
+                flex: 1.3;
+                font-size: 0.65em;
+                border-left: 3px solid #ffcc44;
+              "
+            >
+              <p style="color: #ffcc44; font-weight: bold; margin-bottom: 8px">
+                申請中
+              </p>
               <ul style="margin: 0; line-height: 1.9">
                 <li>曲面多平面重組之血管結構自動分組方法。</li>
                 <li>基於 CMPR 之多軸直徑整合與狹窄定量方法。</li>
@@ -432,26 +684,53 @@
             </div>
 
             <!-- 專利證書 -->
-            <div style="flex: 0.9; display: flex; flex-direction: column; align-items: center; gap: 6px">
-              <div style="flex: 1; width: 100%; border-radius: 8px; border: 2px solid rgba(0,212,255,0.4); overflow: hidden; background: rgba(255,255,255,0.97); display: flex; align-items: center; justify-content: center; padding: 6px; box-sizing: border-box">
+            <div
+              style="
+                flex: 0.9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 6px;
+              "
+            >
+              <div
+                style="
+                  flex: 1;
+                  width: 100%;
+                  border-radius: 8px;
+                  border: 2px solid rgba(0, 212, 255, 0.4);
+                  overflow: hidden;
+                  background: rgba(255, 255, 255, 0.97);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 6px;
+                  box-sizing: border-box;
+                "
+              >
                 <img
                   src="assets/I920931_patent.png"
                   alt="發明第 I920931 號專利證書"
-                  style="max-width: 100%; max-height: 260px; object-fit: contain"
+                  style="
+                    max-width: 100%;
+                    max-height: 260px;
+                    object-fit: contain;
+                  "
                 />
               </div>
               <p class="sub-text" style="font-size: 0.5em; white-space: nowrap">
                 發明第 I920931 號 &nbsp;·&nbsp; 公告日 2024/12/11
               </p>
             </div>
-
           </div>
         </section>
 
         <section>
           <h2>競賽與願景</h2>
           <div style="display: flex; gap: 20px; align-items: stretch">
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 12px">
+            <div
+              style="flex: 1; display: flex; flex-direction: column; gap: 12px"
+            >
               <div class="project-box" style="flex: 1; font-size: 0.7em">
                 <h4 class="highlight">榮譽</h4>
                 <ul>
@@ -469,10 +748,27 @@
                 </ul>
               </div>
             </div>
-            <div style="flex: 1.4; display: flex; flex-direction: column; align-self: stretch">
-              <div class="vstack" style="min-height: 0; flex: 1; max-height: none">
+            <div
+              style="
+                flex: 1.4;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+              "
+            >
+              <div
+                class="vstack"
+                style="min-height: 0; flex: 1; max-height: none"
+              >
                 <div class="vitem">
-                  <img src="assets/競賽獎狀.png" alt="競賽獎狀" style="border-radius: 6px; box-shadow: 0 2px 16px rgba(0,0,0,0.5)" />
+                  <img
+                    src="assets/競賽獎狀.png"
+                    alt="競賽獎狀"
+                    style="
+                      border-radius: 6px;
+                      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+                    "
+                  />
                 </div>
               </div>
             </div>
