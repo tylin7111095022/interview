@@ -121,9 +121,9 @@
             <img src="assets/person.png" />
             <h1>林宗佑 <small style="font-size: 0.5em">TSUNG-YU LIN</small></h1>
           </div>
-          <p class="highlight">應徵職稱：AI工程師</p>
+          <p class="highlight">應徵職稱：演算法資深工程師</p>
           <p class="sub-text">
-            專長：深度學習、影像處理、Web平台開發（前後端）
+            專長：深度學習、影像處理、Web網頁開發（前後端）
           </p>
           <hr />
           <p style="font-size: 0.6em">0977-661-082 | asd3718295@gmail.com</p>
@@ -179,7 +179,10 @@
                     margin: 20px 0;
                   "
                 />
-                <li>具備AI模型研發、API 部署 (FastAPI) 到 網頁前端經驗。</li>
+                <li>
+                  具備AI模型研發(PyTorch)、API 部署 (FastAPI)
+                  到網頁前端(React)經驗。
+                </li>
                 <li>
                   擅長將複雜演算法轉化為專利技術，具備產線與醫療級專案實務經驗。
                 </li>
@@ -518,7 +521,7 @@
                   margin-bottom: 2px;
                 "
               >
-                為放射科醫師打造的網頁端DICOM標註工具，串接AI
+                為放射科醫師打造的網頁端乳房攝影標註工具，串接AI
                 推論服務，實現預標註到人工審閱的完整閉環。
               </p>
               <div
@@ -582,7 +585,69 @@
                 </div>
               </div>
               <p class="sub-text" style="text-align: center">
-                DICOM 標註平台操作展示
+                乳房攝影標註平台操作展示
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>會議逐字稿轉錄工具</h2>
+          <div style="display: flex; gap: 20px; align-items: stretch">
+            <div
+              style="flex: 1; display: flex; flex-direction: column; gap: 8px"
+            >
+              <p style="font-size: 0.65em; margin-bottom: 2px">
+                <strong>技術應用：</strong>React (Vite) + Express + Whisper
+                (transformers.js)
+              </p>
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px"
+              >
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
+                  <strong style="color: #7fe8ff">本地轉錄、雲端校正</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    逐段可手動觸發送 OpenAI 校正，逐字稿可直接餵給既有 Chat
+                    產品做摘要與會議紀錄。
+                  </p>
+                </div>
+                <div
+                  class="project-box"
+                  style="font-size: 0.58em; padding: 10px 12px"
+                >
+                  <strong style="color: #7fe8ff">音訊片段擷取</strong>
+                  <p style="margin-top: 5px; color: #ccc; line-height: 1.5">
+                    只送待校正片段給 OpenAI，兼顧成本控制與辨識精準度。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                flex: 1.2;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+              "
+            >
+              <div
+                class="vstack"
+                style="min-height: 0; flex: 1; max-height: none"
+              >
+                <div class="vitem">
+                  <video
+                    src="assets/transcript_demo.mp4"
+                    controls
+                    muted
+                    playsinline
+                  ></video>
+                </div>
+              </div>
+              <p class="sub-text" style="text-align: center">
+                會議逐字稿轉錄工具操作展示
               </p>
             </div>
           </div>
@@ -640,8 +705,9 @@
             </div>
             <div>
               <div class="skill-tag">JavaScript</div>
-              <div class="skill-tag">Node.js (Express)</div>
               <div class="skill-tag">React</div>
+              <div class="skill-tag">Vite</div>
+              <div class="skill-tag">Node.js (Express)</div>
             </div>
           </div>
 
